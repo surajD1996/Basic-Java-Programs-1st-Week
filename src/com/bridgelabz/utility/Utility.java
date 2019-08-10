@@ -411,27 +411,60 @@ public class Utility
 	public static float flipCoin(int coinTossedArray[]) 
 	{
 		float headPercentage = 0;
-		float tailPercentage = 0;
+		
 		int count = 0;
 		
 		for(count = 0;count < coinTossedArray.length;count++)
 		{
 			if(coinTossedArray[count]==0)
 			{
-				headPercentage = headPercentage + coinTossedArray[count];
-			}
-			else
-			{
-				tailPercentage = tailPercentage + coinTossedArray[count];
+				headPercentage++;
 			}
 		}
 		
 		headPercentage = (headPercentage/coinTossedArray.length)*100;
-		//tailPercentage = (tailPercentage/coinTossedArray.length)*100;
+		
 		return headPercentage;
 	}
-	
-	
+
+	/**
+	 * purpose 	calculates table of the powers of 2 that are less than or equal to 2^n
+	 * @param power		is power till we need to calculate the Answer 
+	 */
+	public static void powerOf2(int power) 
+	{
+		int count = 0;
+		int temporary = 0;
+		int answer = 0;
+		
+		for(count = 1;count<=power;count++)
+		{
+			temporary = count;
+			answer = 1;
+			
+			while(temporary != 0)
+			{
+				answer = answer * 2;
+				temporary--;
+			}
+			System.out.println(count+" = "+answer);
+		}
+		
+	}
+
+	public static float harmonicNumber(int endPoint) 
+	{
+		float answer = 0;
+		int count = 0;
+		
+		for(count = 1;count<=endPoint;count++)
+		{
+			answer = answer + 1/count;
+			System.out.println(answer);
+		}
+		
+		return answer;
+	}
 	
 }
 

@@ -1,6 +1,6 @@
 
 /******************************************************************************
- *  Purpose	 	To find Power of 2
+ *  Purpose	 	To Find square root by using newtons method
  *  @author  	Suraj
  *  @version 	1.0
  *  @since   	10-08-2019
@@ -9,16 +9,26 @@
 
 package com.bridgelabz.conditionals;
 
-import com.bridgelabz.utility.Utility;
-
-public class PowerOf2 
+public class Sqrt 
 {
 
 	public static void main(String[] args) 
 	{
-		int power = Integer.parseInt(args[0]);
-		System.out.println("You Entered "+power);
-		Utility.powerOf2(power);
+		int i=0,j=0;
+		for(i=1;i<4;i++)
+		{
+			for(j=1;j<7;j++)
+			{
+				if((j>=5-i)&&(j<=3+i))
+				{
+					System.out.print("*");
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println("");
+		}
 	}
-
 }
