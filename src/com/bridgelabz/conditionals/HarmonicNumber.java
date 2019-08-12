@@ -17,8 +17,8 @@ public class HarmonicNumber
 
 	public static void main(String[] args) 
 	{
-		int endPoint = Integer.parseInt(args[0]);
-		float answer = 0;
+		double endPoint = Double.parseDouble(args[0]);
+		double answer = 0;
 		System.out.println("Yo Entered "+endPoint);
 		
 		answer = Utility.harmonicNumber(endPoint);
